@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+SETLEDS="$HOME/bin/setleds"
+KEYBOARD_FILTER="Usb*"
+
+case "${1:-toggle}" in
+  on|+scroll)
+    ACTION="+scroll"
+    ;;
+  off|-scroll)
+    ACTION="-scroll"
+    ;;
+  toggle|^scroll)
+    ACTION="^scroll"
+    ;;
+  status)
+    exec "$SETLEDS" -v -name "$KEYBOARD_FILTER"
+    ;;
+  *)
+    echo "Uso: luz [on|off|toggle|status]" >&2
+    exit 1
+    ;;
+esac
+
+exec "$SETLEDS" -name "$KEYBOARD_FILTER" "$ACTION"
+
