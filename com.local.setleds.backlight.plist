@@ -6,8 +6,9 @@
     <string>com.local.setleds.backlight</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/felipe/bin/luz</string>
-        <string>on</string>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>"$HOME/bin/luz" on</string>
     </array>
     <key>RunAtLoad</key>
     <true/>

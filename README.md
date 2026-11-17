@@ -91,6 +91,6 @@ Se quiser um botão rápido na barra de menus para clicar e ligar/desligar:
 2. Crie um novo atalho chamado **"Luz do Teclado"**.
 3. Adicione a ação **"Executar Script Shell"** com o comando:
    ```sh
-   /Users/felipe/bin/luz toggle
+   $HOME/bin/luz toggle
    ```
 4. Nos detalhes do atalho `(i)`, marque a opção **"Fixar na Barra de Menus"**.
